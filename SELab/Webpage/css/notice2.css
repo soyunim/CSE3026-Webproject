@@ -1,0 +1,109 @@
+
+
+a:hover {
+	text-decoration: none;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 60px;
+	color: #00abd9;
+	margin: 20px 0 5px 0;
+}
+
+h2 {
+	color: rgb(156, 156, 156);
+	margin: 10px 0;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+
+  .pull-left {
+  	float: left;
+  }
+
+ .pull-right {
+  	float: right;
+ }
+
+ .inline-list > li {
+  	display: inline-block;
+ }
+
+ .scrollable {
+  	overflow-x: hidden;
+  	overflow-y: scroll;
+}
+
+#board{
+	margin-bottom: 10px;
+}
+
+.contents #information {
+	position: relative;
+	overflow: hidden;
+}
+
+.contents ul {
+	clear: both;
+	overflow: hidden;
+}
+
+.contents li {
+	list-style: none;
+}
+
+.contents li.title{
+	width: 60%;
+	border-right: 1px solid #dfdfdf;
+	text-align: center;
+}
+
+.contents li.name{
+	width: 160px;
+	border-right: 1px solid #dfdfdf;
+	text-align: center;
+}
+
+.contents li.time{
+	width: 160px;
+	text-align: center;
+}
+
+.contents .header li {
+	background-color: #8bcbe3;
+	height: 40px;
+	font-size: 20px;
+	line-height: 40px;
+	color: white;
+	border-bottom: 3px solid #dfdfdf;
+}
+
+.contents .entry li {
+	background-color: white;
+}
+
+.contents .entry:nth-child(odd) li {
+	background-color: #edf7fa;
+}
+
+.important{
+	font-weight: 700;
+	color: red;
+}
+
+.contents .entry li.title {
+	width: 60%;
+	text-align: left;
+}
+
+.contents .entry .information {
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+}

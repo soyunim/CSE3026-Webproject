@@ -1,0 +1,161 @@
+body{
+    margin:0;
+}
+/* 여기서부터 탑메뉴 */
+header{
+    width:100%;
+    height:64px;
+    display:flex;
+    justify-content: center;
+    background-color: #333;
+    position:fixed;
+}
+.logo{
+    width:15%;
+    height:100%;
+}
+.logoimage{
+    display:flex;
+    justify-content: center;
+    padding-top:10px;
+}
+.logoimage img{
+    width:120px;
+}
+
+.topmenu{
+    width:70%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+}
+.top{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    display: flex;
+}
+.top li{
+    float:left;
+    padding:0;  
+}
+.top li a{
+    padding: 20px 20px;
+    margin: 0;
+    display: flex;
+    font-size: 15pt;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.top li a:hover{
+    background-color:rgb(17, 17, 17);
+}
+
+.login{
+    width:15%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+}
+.login a img{
+    width:50px;
+    padding-top:6px;
+}
+
+
+/* 여기서부터 사이드메뉴 */
+.test{
+    display:flex;
+    flex-direction:row;
+}
+nav{
+    width:15%;
+    height:100%;
+    margin-top:64px;
+    min-width:200px;
+}
+nav div{
+    position:fixed;
+    height:100%;
+    background-color: #f1f1f1;
+    width:15%;
+    min-width:200px;
+}
+nav h4{
+    text-align:center;
+    font-size:16pt;
+    margin:0;
+    padding:15px 0;
+    background-color: rgb(231, 118, 53);
+    color:white;
+}
+.side{
+    list-style-type: none;
+    margin:0;
+    padding-left:0;
+    text-align:center;
+    font-size:15pt;
+}
+.sidemenu{
+    padding-top:10px;
+    margin:0;
+}
+.sidemenu:hover{
+    background-color:#333;
+}
+.sidemenu:hover > a{
+    color:white;
+}
+.sidemenu a{
+    color:black;
+    display:block;
+    text-decoration: none;
+    padding: 5px 16px;
+}
+.sidemenu:hover > .inside{
+    display:block;
+}
+.inside{
+    display:none;
+    padding:0;
+}
+.inside li{
+    background-color: white;
+    cursor:pointer;
+}
+.inside li:hover > a{
+    font-weight: bold;
+}
+
+
+/*본문*/
+.container{
+    margin-top:64px;
+    position: flex;
+    flex-direction: column;
+    width:85%;
+    height:100%;
+}
+.content{
+    top:0;
+    width:100%;
+    height:100%;
+}
+.content div{
+    margin:20px 30px;
+    margin-right:15%;
+    word-break: break-all;
+}
+
+footer {
+    position: relative;
+    bottom:0;
+    height: auto;
+    color:rgb(90, 90, 90);
+    background-color: #333;
+    text-align:center;
+    margin-top:10px;
+    padding:10px;
+}
