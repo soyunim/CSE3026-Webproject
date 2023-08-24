@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <button onclick="document.getElementById('checkcode').innerHTML = getRndInteger(1111,9999)">코드생성</button>
+            <p id="checkcode"></p>
+        </div>
+
+
+        <script>
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        </script>
+
+    </body>
+</html>

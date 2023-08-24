@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="css/mypage.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+      <header>
+        <div class="logo">
+          <a class="logoimage" href="home.html">
+            <img src="selab_logo_S.png">
+          </a>
+        </div>
+        <div class="topmenu">
+          <ul class="top">
+            <li>
+              <a href="notice.html">NOTICE</a>
+            </li>
+            <li>
+              <a href="members.html">MEMBERS</a>
+            </li>
+            <li>
+              <a href="research.html">RESEARCH</a>
+            </li>
+            <li>
+              <a href="publication.html">PUBLICATIONS</a>
+            </li>
+            <li>
+              <a href="course.html">COURSES</a>
+            </li>
+            <li>
+              <a href="gallery.html">GALLERY</a>
+            </li>
+          </ul>
+        </div>
+        <div class="login">
+          <a href="#"><img src="icon2.png"></a>
+        </div>
+      </header>
+
+        
+      <div class="test">
+          <nav>
+              <div>
+                  <h4>Mypage</h4>
+                  <ul class="side">
+                    <li class="sidemenu"><a href="#atten">출결확인</a></li>
+                    <li class="sidemenu"><a href="#mod">정보수정</a></li>
+                  </ul>
+              </div>
+          </nav>
+          <div class="container">
+              <div class="content">
+                <div>
+                  <div id="atten">
+                    <h2>출결확인</h2>
+                      <div>
+                        내용
+                      </div>
+                  </div>
+                  <hr>
+                <div id="mod">
+                  <h2>정보수정</h2>
+                    <form>
+                      <label for="id">아이디</label>
+                      <br>
+                      <input type="text" id="id" name="id" placeholder="아이디 수정불가" disabled>
+                      <br>
+                      <label for="code">학번</label>
+                      <br>
+                      <input type="text" id="code" name="code" placeholder="학번 수정불가" disabled>
+                      <br>
+                      <label for="email">* e-mail</label>
+                      <br>
+                      <input type="email" id="email" name="email" required>
+                      <br>
+                      <label for="git">* git mail</label>
+                      <br>
+                      <input type="email" id="git" name="git" required>
+                      <br>
+                      <button type="submit">수정하기</button>
+                    </form>
+                    <br><br>
+                    <h4>비밀번호 변경</h4>
+                    <form>
+                      <label for="psw">* 현재 비밀번호 </label>
+                      <br>
+                      <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z]).{8,}" title="최소 8글자, 숫자 포함" required>
+                      <input type="checkbox" onclick="viewpsw()">Show Password
+                      <br>
+                      <label for="psw">* 새 비밀번호 </label>
+                      <br>
+                      <input type="password" id="newpsw" name="newpsw" pattern="(?=.*\d)(?=.*[a-z]).{8,}" title="최소 8글자, 숫자 포함" required>
+                      <input type="checkbox" onclick="viewpsw()">Show Password
+                      <br>
+                      <label for="psw">* 새 비밀번호 확인 </label>
+                      <br>
+                      <input type="password" id="newpswch" name="newpswch" pattern="(?=.*\d)(?=.*[a-z]).{8,}" title="최소 8글자, 숫자 포함" required>
+                      <br>
+                      <button type="submit">수정하기</button>
+                    </form>
+                  </div>
+              </div>
+
+              <footer>
+                  <a>@COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION: ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</a>
+              </footer>
+          </div>
+      </div>
+            <script>
+                    var myInput = document.getElementById("psw");
+                    var letter = document.getElementById("letter");
+                    var number = document.getElementById("number");
+                    var length = document.getElementById("length");
+                    
+                    // When the user starts to type something inside the password field
+                    myInput.onkeyup = function() {
+                      // Validate lowercase letters
+                      var lowerCaseLetters = /[a-z]/g;
+                      if(myInput.value.match(lowerCaseLetters)) {  
+                        letter.classList.remove("invalid");
+                        letter.classList.add("valid");
+                      } else {
+                        letter.classList.remove("valid");
+                        letter.classList.add("invalid");
+                      }
+                    
+                      // Validate numbers
+                      var numbers = /[0-9]/g;
+                      if(myInput.value.match(numbers)) {  
+                        number.classList.remove("invalid");
+                        number.classList.add("valid");
+                      } else {
+                        number.classList.remove("valid");
+                        number.classList.add("invalid");
+                      }
+                      
+                      // Validate length
+                      if(myInput.value.length >= 8) {
+                        length.classList.remove("invalid");
+                        length.classList.add("valid");
+                      } else {
+                        length.classList.remove("valid");
+                        length.classList.add("invalid");
+                      }
+                    }
+                    function viewpsw() {
+                        var x = document.getElementById("psw");
+                        if (x.type === "password") {
+                            x.type = "text";
+                        } else {
+                            x.type = "password";
+                        }
+                    }
+
+        </script>                    
+    </body>
+</html>
